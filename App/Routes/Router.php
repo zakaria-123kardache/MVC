@@ -37,7 +37,7 @@ class Router
                 $controller = new $callable[0]();
                 $methodName = $callable[1];
 
-                if ($method === 'POST' && ($methodName === 'update' || $methodName === 'store' || $methodName === 'destroy')) {
+                if ($method === 'POST' ) {
                     // Handle POST requests
                     $postData = $_POST;
                     $args = array_merge($matches, [$postData]); // Merge $matches and $postData into a single array
