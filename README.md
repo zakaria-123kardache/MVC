@@ -53,7 +53,7 @@ project/
 
 1. Clone the repository
 ```bash
-git clone <https://github.com/zakaria-123kardache/MVC.git>
+git clone https://github.com/zakaria-123kardache/MVC.git
 cd MVC
 ```
 2. Install dependencies
