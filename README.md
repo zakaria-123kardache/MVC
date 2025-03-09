@@ -46,19 +46,6 @@ project/
 ├── .env/
 └── README.md
 
-## Installation
-
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd project
-composer install
-cp .env.example .env
-DB_HOST=localhost
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-DB_DATABASE=your_database
-DB_PORT=5432
 ```
 
 
