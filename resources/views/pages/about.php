@@ -1,4 +1,3 @@
 <?php
 
-
-echo "am in about ";
+echo" am in about page";

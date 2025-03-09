@@ -1,30 +1,20 @@
 <?php
-require '../vendor/autoload.php';
 
-// echo "am in index";
+use App\Controller\IndexController;
+use App\Routes\Router;
 
-$request = $_SERVER['REQUEST_URI'];
-$viewPath = '/../resources/views/pages/';
+require __DIR__. '/../vendor/autoload.php';
+session_start();
 
-switch($request)
-{
-    case'/':
-    case'home':
-    // case'':
-        require __DIR__.$viewPath.'home.php';
-        break;
-    case'login':
-        require __DIR__.$viewPath.'login.php';
-        break;
-    case'register':
-        require __DIR__.$viewPath.'register.php';
-        break;  
-        
-    default :
-    require __DIR__. '/../resources/views/404.php';
-}
+$router = new Router($_SERVER['REQUEST_URI']);
+
+
+
+// routes 
+$router->get('/', [IndexController::class, 'index']);
+$router->get('/about',[IndexController::class, 'about']);
 
 
 
 
-
+$router->run();
